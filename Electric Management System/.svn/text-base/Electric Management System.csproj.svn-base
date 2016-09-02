@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FE969F0-9EC4-415A-8E7F-E81434E23CAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Electric_Management_System</RootNamespace>
+    <AssemblyName>Electric Management System</AssemblyName>
+    <ApplicationIcon>EMS icon.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <StartupObject>Electric_Management_System.Program</StartupObject>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>vi-VN</TargetCulture>
+    <ProductName>EMS</ProductName>
+    <PublisherName>Firewolf</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External Library\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\External Library\CrystalDecisions.Enterprise.Viewing.ReportSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External Library\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External Library\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Report.cs" />
+    <Compile Include="App_Code\DataTier.cs" />
+    <Compile Include="App_Code\Invoice.cs" />
+    <Compile Include="App_Code\Customer.cs" />
+    <Compile Include="App_Code\Purpose.cs" />
+    <Compile Include="App_Code\Station.cs" />
+    <Compile Include="App_Data\EMSDBDataSet.cs">
+      <DependentUpon>EMSDBDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="App_Data\EMSDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMSDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="changeDateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeDateForm.Designer.cs">
+      <DependentUpon>changeDateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changePasswordForm.Designer.cs">
+      <DependentUpon>changePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsChotSoDienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dsChotSoDienForm.Designer.cs">
+      <DependentUpon>dsChotSoDienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inHoaDonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inHoaDonForm.Designer.cs">
+      <DependentUpon>inHoaDonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ketQuaMDKForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ketQuaMDKForm.designer.cs">
+      <DependentUpon>ketQuaMDKForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ketQuaSHForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ketQuaSHForm.designer.cs">
+      <DependentUpon>ketQuaSHForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ketQuaSX3Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ketQuaSX3Form.Designer.cs">
+      <DependentUpon>ketQuaSX3Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginForm.Designer.cs">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportForm.Designer.cs">
+      <DependentUpon>reportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SoCai.cs">
+      <DependentUpon>SoCai.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\NhatKyChung.cs">
+      <DependentUpon>NhatKyChung.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\TheoDoiChuyenTien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TheoDoiChuyenTien.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TheoDoiGTGT.cs">
+      <DependentUpon>TheoDoiGTGT.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\TheoDoiHHDV.cs">
+      <DependentUpon>TheoDoiHHDV.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\HoaDonGiayTrang.rpt.cs">
+      <DependentUpon>HoaDonGiayTrang.rpt.bak</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Hoa don giay trang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hoa don giay trang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\HoaDonGiayTrang.cs">
+      <DependentUpon>HoaDonGiayTrang.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\PrintInvoiceSX3.cs">
+      <DependentUpon>PrintInvoiceSX3.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\PrintInvoice.cs">
+      <DependentUpon>PrintInvoice.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\ViewInvoiceSX3.cs">
+      <DependentUpon>ViewInvoiceSX3.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\ViewInvoice.cs">
+      <DependentUpon>ViewInvoice.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\MonthlyReport_MDK.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyReport_MDK.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MonthlyReport_SH.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyReport_SH.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TotalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TotalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="sendMailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sendMailForm.Designer.cs">
+      <DependentUpon>sendMailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingleInstanceApplication.cs" />
+    <Compile Include="soNhatKyChungForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="soNhatKyChungForm.Designer.cs">
+      <DependentUpon>soNhatKyChungForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="theoDoiChuyenTienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theoDoiChuyenTienForm.Designer.cs">
+      <DependentUpon>theoDoiChuyenTienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="theoDoiGTGTForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theoDoiGTGTForm.Designer.cs">
+      <DependentUpon>theoDoiGTGTForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="theoDoiHHDVForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theoDoiHHDVForm.Designer.cs">
+      <DependentUpon>theoDoiHHDVForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xemBaoCaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xemBaoCaoForm.Designer.cs">
+      <DependentUpon>xemBaoCaoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xemDanhSachKHForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xemDanhSachKHForm.Designer.cs">
+      <DependentUpon>xemDanhSachKHForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hoaDonCuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hoaDonCuForm.Designer.cs">
+      <DependentUpon>hoaDonCuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hoaDonMoiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hoaDonMoiForm.Designer.cs">
+      <DependentUpon>hoaDonMoiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="khachHangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="khachHangForm.Designer.cs">
+      <DependentUpon>khachHangForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeDateForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>changeDateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changePasswordForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>changePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dsChotSoDienForm.resx">
+      <DependentUpon>dsChotSoDienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inHoaDonForm.resx">
+      <DependentUpon>inHoaDonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ketQuaMDKForm.resx">
+      <DependentUpon>ketQuaMDKForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ketQuaSHForm.resx">
+      <DependentUpon>ketQuaSHForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ketQuaSX3Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ketQuaSX3Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>reportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Reports\HoaDonGiayTrang.rpt.bak">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HoaDonGiayTrang.rpt.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Reports\SoCai.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SoCai.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\NhatKyChung.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NhatKyChung.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TheoDoiChuyenTien.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TheoDoiChuyenTien.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TheoDoiGTGT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TheoDoiGTGT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TheoDoiHHDV.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TheoDoiHHDV.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Hoa don giay trang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Hoa don giay trang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\HoaDonGiayTrang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HoaDonGiayTrang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrintInvoiceSX3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintInvoiceSX3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrintInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ViewInvoiceSX3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewInvoiceSX3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ViewInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MonthlyReport_MDK.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyReport_MDK.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MonthlyReport_SH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyReport_SH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TotalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TotalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sendMailForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>sendMailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="soNhatKyChungForm.resx">
+      <DependentUpon>soNhatKyChungForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theoDoiChuyenTienForm.resx">
+      <DependentUpon>theoDoiChuyenTienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theoDoiGTGTForm.resx">
+      <DependentUpon>theoDoiGTGTForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theoDoiHHDVForm.resx">
+      <DependentUpon>theoDoiHHDVForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xemBaoCaoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>xemBaoCaoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xemDanhSachKHForm.resx">
+      <DependentUpon>xemDanhSachKHForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hoaDonCuForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>hoaDonCuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hoaDonMoiForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>hoaDonMoiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="khachHangForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>khachHangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DanhSachKhachHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DanhSachKhachHang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="suaGiaDienForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>suaGiaDienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="suaTenTramForm.resx">
+      <DependentUpon>suaTenTramForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="themTramForm.resx">
+      <DependentUpon>themTramForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xemHoaDonForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>xemHoaDonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xoaTramForm.resx">
+      <DependentUpon>xoaTramForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\DanhSachKhachHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DanhSachKhachHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="suaGiaDienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="suaGiaDienForm.Designer.cs">
+      <DependentUpon>suaGiaDienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="suaTenTramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="suaTenTramForm.designer.cs">
+      <DependentUpon>suaTenTramForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="themTramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="themTramForm.designer.cs">
+      <DependentUpon>themTramForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xemHoaDonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xemHoaDonForm.Designer.cs">
+      <DependentUpon>xemHoaDonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xoaTramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xoaTramForm.Designer.cs">
+      <DependentUpon>xoaTramForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_off.png" />
+    <None Include="Resources\Close_Box_Red.png" />
+    <None Include="Resources\user1_delete.png" />
+    <None Include="Resources\user1_add.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\index_delete.png" />
+    <None Include="Resources\index_add.png" />
+    <None Include="Resources\index.png" />
+    <None Include="Resources\mail_attachment.png" />
+    <None Include="Resources\invoice_edit.png" />
+    <None Include="Resources\Forward_16x16.png" />
+    <None Include="Resources\Mail_16x16.png" />
+    <None Include="Resources\Key.png" />
+    <None Include="Resources\EMS Logo 3.jpg" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\Delete_16x16.png" />
+    <None Include="Resources\Presentation_16x16.png" />
+    <None Include="Resources\Folder_16x16.png" />
+    <None Include="Resources\Edit_16x16.png" />
+    <None Include="Resources\Add_16x16.png" />
+    <None Include="Resources\Undo_16x16.png" />
+    <None Include="Resources\Cancel_16x16.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\old_invoice.png" />
+    <None Include="Resources\new_invoice.png" />
+    <None Include="Resources\thuchi_report.png" />
+    <None Include="Resources\total_report.png" />
+    <None Include="Resources\monthly_report.png" />
+    <None Include="Resources\customer.png" />
+    <None Include="Resources\Key_16x16.png" />
+    <None Include="Resources\Dollar__Green.png" />
+    <None Include="Resources\Calendar_16x16.png" />
+    <None Include="Resources\Log Out_16x16.png" />
+    <None Include="Resources\print_16.png" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\EMS Logo 2.png" />
+    <None Include="Resources\EMS Logo.png" />
+    <None Include="Resources\report_deactive.png" />
+    <None Include="Resources\report_click.png" />
+    <None Include="Resources\report_active.png" />
+    <None Include="Resources\invoice_deactive.png" />
+    <None Include="Resources\invoice_click.png" />
+    <None Include="Resources\invoice_active.png" />
+    <None Include="Resources\exit_deactive.png" />
+    <None Include="Resources\exit_click.png" />
+    <None Include="Resources\exit_active.png" />
+    <None Include="Resources\customer_deactive.png" />
+    <None Include="Resources\customer_click.png" />
+    <None Include="Resources\customer_active.png" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\EMSDBDataSet.xsc">
+      <DependentUpon>EMSDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_Data\EMSDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>EMSDBDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Data\EMSDBDataSet.xss">
+      <DependentUpon>EMSDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Data.Access.Components.2.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Data Access Components 2.8</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EMS icon.ico" />
+    <Content Include="Resources\EMS icon.ico" />
+    <Content Include="Resources\PrintLogo.png" />
+    <Content Include="Resources\PrintLogo2.png" />
+    <Content Include="Resources\Signature.png" />
+    <None Include="Resources\view.png" />
+    <Content Include="Resources\view_refresh.png" />
+    <None Include="Resources\view_refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FlashControlV71">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ShockwaveFlashObjects">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
