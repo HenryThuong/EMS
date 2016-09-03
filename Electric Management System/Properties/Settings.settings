@@ -21,5 +21,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=.\SQLEXPRESS;Initial Catalog=EMSDB2;Persist Security Info=True;User ID=sa;Password=quan232</Value>
     </Setting>
+    <Setting Name="InvoiceType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">old</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

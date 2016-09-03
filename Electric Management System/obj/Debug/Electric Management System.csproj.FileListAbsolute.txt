@@ -1,0 +1,37 @@
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\bin\Debug\Electric Management System.exe.config
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\bin\Debug\Electric Management System.exe
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\bin\Debug\Electric Management System.pdb
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\bin\Debug\CrystalDecisions.Shared.dll
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\bin\Debug\CrystalDecisions.Windows.Forms.dll
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.AboutBox.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.changeDateForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.changePasswordForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.changeInvoiceForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.dsChotSoDienForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.inHoaDonForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.ketQuaMDKForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.ketQuaSHForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.ketQuaSX3Form.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.loginForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.reportForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.sendMailForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.soNhatKyChungForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.theoDoiChuyenTienForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.theoDoiGTGTForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.theoDoiHHDVForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.xemBaoCaoForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.xemDanhSachKHForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.hoaDonCuForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.hoaDonMoiForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.khachHangForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.mainForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.Properties.Resources.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.suaGiaDienForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.suaTenTramForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.themTramForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.xemHoaDonForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.xoaTramForm.resources
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric Management System.csproj.GenerateResource.Cache
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric Management System.exe
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric Management System.pdb
