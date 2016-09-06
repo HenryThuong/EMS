@@ -4,6 +4,7 @@
 \\Mac\Home\Documents\GitHub\EMS\Electric Management System\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 \\Mac\Home\Documents\GitHub\EMS\Electric Management System\bin\Debug\CrystalDecisions.Shared.dll
 \\Mac\Home\Documents\GitHub\EMS\Electric Management System\bin\Debug\CrystalDecisions.Windows.Forms.dll
+\\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric Management System.csprojResolveAssemblyReference.cache
 \\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.AboutBox.resources
 \\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.changeDateForm.resources
 \\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric_Management_System.changePasswordForm.resources
@@ -35,3 +36,9 @@
 \\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric Management System.csproj.GenerateResource.Cache
 \\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric Management System.exe
 \\Mac\Home\Documents\GitHub\EMS\Electric Management System\obj\Debug\Electric Management System.pdb
+\\Mac\Home\Desktop\EMS\Electric Management System\bin\Debug\Electric Management System.exe.config
+\\Mac\Home\Desktop\EMS\Electric Management System\obj\Debug\Electric Management System.exe
+\\Mac\Home\Desktop\EMS\Electric Management System\obj\Debug\Electric Management System.pdb
+\\Mac\Home\Desktop\EMS 4.6\Electric Management System\bin\Debug\Electric Management System.exe.config
+\\Mac\Home\Desktop\EMS 4.6\Electric Management System\obj\Debug\Electric Management System.exe
+\\Mac\Home\Desktop\EMS 4.6\Electric Management System\obj\Debug\Electric Management System.pdb

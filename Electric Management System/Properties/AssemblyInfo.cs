@@ -1,12 +1,13 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Resources;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Electric Management System")]
-[assembly: AssemblyDescription("Phần mềm EMS là phần mềm hỗ trợ việc quản lý và kinh doanh điện. Phiên bản 4.5 được hoàn thành vào ngày 20 tháng 3 năm 2014.\r\n\r\nTác giả: Nguyễn Huy Thường\r\nSố điện thoại: 0988902188\r\nEmail: thuong@me.com")]
+[assembly: AssemblyTitle("Electric Management System 4.6")]
+[assembly: AssemblyDescription("Change log:\n-Add new invoice\n-Can switch between old invoice and new one")]
 [assembly: AssemblyConfiguration(".NET Framework 2, SQL Server 2005 Express, Crystal Report 10")]
 [assembly: AssemblyCompany("Phong Nguyên Computer")]
 [assembly: AssemblyProduct("Electric Management System")]
@@ -29,5 +30,6 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("4.5.1.0")]
-[assembly: AssemblyFileVersion("4.5.1.0")]
+[assembly: AssemblyVersion("4.6.0.0")]
+[assembly: AssemblyFileVersion("4.6.0.0")]
+[assembly: NeutralResourcesLanguageAttribute("vi-VN")]
